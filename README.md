@@ -1,4 +1,5 @@
-# TeleDrive 2.0
+
+![TeleDrive 2.0](https://user-images.githubusercontent.com/39073758/112276623-303b8480-8c3e-11eb-85b7-c548d91da225.png)
 ## TeleDrive 1.0's Sequel. Simpler, Faster, Easier.
 
 This all-in-one app contains the ability to call using audio and video with your drive team with end-to-end encryption! Rather than having to use Parsec for video, Discord for audio, and the TeleDrive executables for gamepad, everything is though this app making it VERY easy to setup!
