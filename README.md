@@ -92,9 +92,6 @@ Driver setup is very easy!
 
 **However, thanks to a special file saving feature, you only need to enter this in once!** (unless the Host decides to regenerate a room code).
 
-![image](https://user-images.githubusercontent.com/39073758/112272339-4e52b600-8c39-11eb-91e9-7a519fc77b77.png)
-
-
 ![alt text](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/blob/main/readme_images/openDriverRoom.png "Click open room")
 
 ### Step 4: Click join room and make sure that it says `Status: Connected` on the top. Once it shows up, you need to either click `Start + A` or `Start + B` depending on your driver user. To confirm this user, it will show on the top bar which user you are. 
