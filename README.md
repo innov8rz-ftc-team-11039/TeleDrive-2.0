@@ -5,8 +5,7 @@ This all-in-one app contains the ability to call using audio and video with your
 
 Also note that you also do not need to set up port forwarding anymore either!
 
-This time, the instructions are very simple and there are only two steps: [Installation](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/new/main?readme=1#installation "Go to Installation Section") and [Usage](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/new/main?readme=1#usage "Go to Usage Section")
-.
+This time, the instructions are very simple and there are only two steps: [Installation](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/new/main?readme=1#installation "Go to Installation Section") and [Usage](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/new/main?readme=1#usage "Go to Usage Section").
 
 # Installation
 
@@ -29,13 +28,17 @@ All you have to do it go to to Releases Tab for the latest release and download 
 
 Then, you simply need to extract the contents of `TeleDrive-MacOS.zip`. These steps are shown in the images below.
 
+![alt text](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/blob/main/readme_images/mac_extract.png "Step 1: Extract .zip Contents")
+![alt text](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/blob/main/readme_images/mac_extract_in_progress.png "Waiting for Extracting to Finish")
+![alt text](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/blob/main/readme_images/mac_extract_finished.png "Step 2: Open the TeleDrive App")
+
 Once done, you need to open the TeleDrive app by double clicking on it.
 
 # Usage
 
 The User Interface is the same across all platforms, but instructions for Host and Driver are different. 
 
-**There is a section below dedicated to changed that need to be made to the Robot Controller side code.**
+**Please Note: There is a [section](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0#updating-robot-controller-app-for-teledrive "Go to Robot Controller Code Section") below dedicated to changed that need to be made to the Robot Controller side code.**
 
 ## Host
 
