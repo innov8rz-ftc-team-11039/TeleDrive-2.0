@@ -6,7 +6,9 @@ This all-in-one app contains the ability to call using audio and video with your
 
 Also note that you also do not need to set up port forwarding anymore either!
 
-This time, the instructions are very simple and there are only two steps: [Installation](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/new/main?readme=1#installation "Go to Installation Section") and [Usage](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/new/main?readme=1#usage "Go to Usage Section").
+The instructions are very simple and there are only two steps: [Installation](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/new/main?readme=1#installation "Go to Installation Section") and [Usage](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/new/main?readme=1#usage "Go to Usage Section").
+
+#### If you are interested in digging into the code and understanding/tinkering with TeleDrive, please proceed to the [Developer Setup Section](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/new/main?readme=1#developer-setup "Go to Developer Setup Section")
 
 # Installation
 
@@ -147,6 +149,10 @@ If you've tried all the solutions listed above, and TeleDrive still doesn't work
   ### Can I use TeleDrive with a LinearOpMode?
   
   Yes! If you are planning on using TeleDrive in a `LinearOpMode`, you only need to download ```TeleDrive_LinearOpMode.java``` from the Releases page and add your code under the comment that says "CUSTOM CODE GOES HERE". 
+  
+# Developer Setup
+
+  If you would like to tinker with TeleDrive or understand how it works, please download this repository (either through `Github Desktop` or as a `zip`). I have taken a lot of time to write comments explaining a lot of the code in the major file: `index.html` and `preload.js`, where the bulk of the code runs. If you have any questions, please feel free to reach out to us at info@innov8rz.net!
   
 # Contributors
 
