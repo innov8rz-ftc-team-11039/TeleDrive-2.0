@@ -250,7 +250,7 @@
     █████████████████████████████████████████████████████
     █─▄─▄─█▄─▄▄─█▄─▄███▄─▄▄─█▄─▄▄▀█▄─▄▄▀█▄─▄█▄─█─▄█▄─▄▄─█
     ███─████─▄█▀██─██▀██─▄█▀██─██─██─▄─▄██─███▄▀▄███─▄█▀█
-    ▀▀▄▄▄▀▀▄▄▄▄▄▀▄▄▄▄▄▀▄▄▄▄▄▀▄▄▄▄▀▀▄▄▀▄▄▀▄▄▄▀▀▀▄▀▀▀▄▄▄▄▄▀
+    ██▄▄▄██▄▄▄▄▄█▄▄▄▄▄█▄▄▄▄▄█▄▄▄▄██▄▄█▄▄█▄▄▄███▄███▄▄▄▄▄█
     |------------WELCOME TO THE MAIN CODE THAT POWERS TELEDRIVE------------|
     |**IT IS RECOMMENDED TO READ ALL COMMENTS TO HELP UNDERSTAND THE CODE**|
      */
@@ -386,12 +386,12 @@
       if (isDriver) {
         window.fs.writeFile(window.dir + '/TeleDrive/appData_Driver.txt', JSON.stringify({ localDisplayName, roomName }), function (err) {
           if (err) throw err;
-          window.logs.appendToLogFile('INFO - Saved Driver App Data to load on next app run (344) \n');
+          window.logs.appendToLogFile('INFO - Saved Driver App Data to load on next app run (389) \n');
         });
       } else {
         window.fs.writeFile(window.dir + '/TeleDrive/appData_Host.txt', JSON.stringify({ localDisplayName, robotIPaddress, roomName }), function (err) {
           if (err) throw err;
-          window.logs.appendToLogFile('INFO - Saved Host App Data to load on next app run (349) \n');
+          window.logs.appendToLogFile('INFO - Saved Host App Data to load on next app run (394) \n');
         });
       }
 
@@ -466,7 +466,7 @@
 
       } else {
         //Very unlikely case, but could happen that the API is not supported
-        window.logs.appendToLogFile('CRITICAL - Your browser does not support getUserMedia API (424) \n');
+        window.logs.appendToLogFile('CRITICAL - Your browser does not support getUserMedia API (469) \n');
       }
 
       //These are variables for every button on the gamepad
@@ -496,7 +496,7 @@
       //This function handles all gamepad related stuff for the Driver user while sending the commands to the Host and updates the variables declared above.
       function startGamepadHandlerAndSocketThread() {
         // This function is only called when the Data Channel connection with the host has been OPENED
-        window.logs.appendToLogFile("INFO - Successfully opened Gamepad Data Channel with Host (454) \n")
+        window.logs.appendToLogFile("INFO - Successfully opened Gamepad Data Channel with Host (499) \n")
 
         var haveEvents = 'GamepadEvent' in window;
         var haveWebkitEvents = 'WebKitGamepadEvent' in window;
@@ -629,11 +629,11 @@
             if (START && A) {
               userNumber = 1;
               document.getElementById('roomCodeText').innerText = "Room Code: " + roomName + "  | Status: Connected | Gamepad User: " + userNumber;
-              window.logs.appendToLogFile('INFO - Gamepad User is now User 1 (587) \n');
+              window.logs.appendToLogFile('INFO - Gamepad User is now User 1 (632) \n');
             } else if (START && B) {
               userNumber = 2;
               document.getElementById('roomCodeText').innerText = "Room Code: " + roomName + "  | Status: Connected | Gamepad User: " + userNumber;
-              window.logs.appendToLogFile('INFO - Gamepad User is now User 2 (591) \n');
+              window.logs.appendToLogFile('INFO - Gamepad User is now User 2 (636) \n');
             }
 
             for (var i = 0; i < controller.axes.length; i++) { // 0 - leftX, 1 - leftY, 2 - rightX, 3 - rightY
@@ -722,7 +722,7 @@
         var signal = JSON.parse(message.data);
         var peerUuid = signal.uuid;
 
-        window.logs.appendToLogFile("INFO - Received Message From Server. Peer UUID: " + peerUuid + ", Signal: " + JSON.stringify(signal) + " (674) \n");
+        window.logs.appendToLogFile("INFO - Received Message From Server. Peer UUID: " + peerUuid + ", Signal: " + JSON.stringify(signal) + " (725) \n");
 
         // Ignore messages that are not for us or from ourselves
         if (peerUuid == localUuid || (signal.dest != localUuid && signal.dest != 'all') || (!peerUuid.includes(roomName))) return;
@@ -731,29 +731,29 @@
           // set up peer connection object for a newcomer peer
           setUpPeer(peerUuid, signal.displayName);
           serverConnection.send(JSON.stringify({ 'displayName': localDisplayName, 'uuid': localUuid, 'dest': peerUuid }));
-          window.logs.appendToLogFile('INFO - Setting Up Peer Connection For Newcomer Peer (683) \n');
+          window.logs.appendToLogFile('INFO - Setting Up Peer Connection For Newcomer Peer (734) \n');
         } else if (signal.displayName && signal.dest == localUuid) {
           // initiate call if we are the newcomer peer
           setUpPeer(peerUuid, signal.displayName, true);
           window.logs.appendToLogFile('INFO - Initiating Call As Newcomer Peer (687) \n');
         } else if (signal.sdp) {
           peerConnections[peerUuid].pc.setRemoteDescription(new RTCSessionDescription(signal.sdp)).then(function () {
-            window.logs.appendToLogFile('INFO - Setting Remote Description of Peer (690) \n');
+            window.logs.appendToLogFile('INFO - Setting Remote Description of Peer (741) \n');
             // Only create answers in response to offers
             if (signal.sdp.type == 'offer') {
               peerConnections[peerUuid].pc.createAnswer().then(description => createdDescription(description, peerUuid)).catch(errorHandler);
-              window.logs.appendToLogFile('INFO - Creating Answer to SDP offer (694) \n');
+              window.logs.appendToLogFile('INFO - Creating Answer to SDP offer (745) \n');
             }
           }).catch(errorHandler);
 
         } else if (signal.ice) {
-          window.logs.appendToLogFile('INFO - Adding ICE Candidate (699) \n');
+          window.logs.appendToLogFile('INFO - Adding ICE Candidate (750) \n');
           peerConnections[peerUuid].pc.addIceCandidate(new RTCIceCandidate(signal.ice)).catch(errorHandler);
         }
       }
 
       function setUpPeer(peerUuid, displayName, initCall = false) {
-        window.logs.appendToLogFile('INFO - Began Peer Setup. Init Call: ' + initCall + '. (705) \n');
+        window.logs.appendToLogFile('INFO - Began Peer Setup. Init Call: ' + initCall + '. (756) \n');
         peerConnections[peerUuid] = { 'displayName': displayName, 'pc': new RTCPeerConnection(peerConnectionConfig) };
         peerConnections[peerUuid].pc.onicecandidate = event => gotIceCandidate(event, peerUuid);
         peerConnections[peerUuid].pc.ontrack = event => gotRemoteStream(event, peerUuid);
@@ -761,43 +761,43 @@
         peerConnections[peerUuid].pc.addStream(localStream);
         // Here, we have set up the remote peer (another user) and the line above adds the Audio and Video streams as well!
 
-        // Now, if we are the host (not Driver), and we are setting up another peer (that's why we check if initCall is false [read line 767]), we need to open a datachannel on 
+        // Now, if we are the host (not Driver), and we are setting up another peer (that's why we check if initCall is false [read line 774]), we need to open a datachannel on 
         // that peer. We then set the callback functions for onmessage and onopen to handle them properly. Note that "onmessage" is never called so it doesn't really matter.
         if (!isDriver && !initCall) {
-          window.logs.appendToLogFile('INFO - Opening Gamepad Data Channel with Driver (713) \n');
+          window.logs.appendToLogFile('INFO - Opening Gamepad Data Channel with Driver (767) \n');
           peerConnections[peerUuid].pc.ondatachannel = e => {
             datachannel = e.channel;
             datachannel.onmessage = e => handleGamepadMessageFromDriver(e.data);
-            datachannel.onopen = e => window.logs.appendToLogFile("INFO - Opened Gamepad Channel with Driver Successfully (717) \n");
+            datachannel.onopen = e => window.logs.appendToLogFile("INFO - Opened Gamepad Channel with Driver Successfully (771) \n");
           }
         }
         // **"initCall" is true if we are setting up our own SDP to send to others**
         if (initCall) {
           // In the case that we are a driver, we want to set up a data channel and attach the callback functions (onmessage, onopen)
           if (isDriver) {
-            window.logs.appendToLogFile('INFO - Opening Gamepad Data Channel with Host. (723) \n');
+            window.logs.appendToLogFile('INFO - Opening Gamepad Data Channel with Host. (778) \n');
             datachannel = peerConnections[peerUuid].pc.createDataChannel(localUuid + "-gamepad");
-            datachannel.onmessage = e => window.logs.appendToLogFile("INFO - Data Channel Message: " + e.data + "(725) \n");
+            datachannel.onmessage = e => window.logs.appendToLogFile("INFO - Data Channel Message: " + e.data + "(780) \n");
             datachannel.onopen = e => startGamepadHandlerAndSocketThread();
           }
           // We then create the offer (both for host and driver) and when it is created, we call the "createdDescription" method
           peerConnections[peerUuid].pc.createOffer({ offerToReceiveVideo: true }).then(description => createdDescription(description, peerUuid)).catch(errorHandler);
-          window.logs.appendToLogFile('INFO - Created Offer LOCAL Offer as Setup Protocol (729) \n');
+          window.logs.appendToLogFile('INFO - Created Offer LOCAL Offer as Setup Protocol (785) \n');
         }
       }
 
       function gotIceCandidate(event, peerUuid) {
         //This just sends the ice candidate to the server when it creates a new one... nothing too special.
-        window.logs.appendToLogFile('INFO - Got New ICE Candidate (734) \n');
+        window.logs.appendToLogFile('INFO - Got New ICE Candidate (791) \n');
         if (event.candidate != null) {
           serverConnection.send(JSON.stringify({ 'ice': event.candidate, 'uuid': localUuid, 'dest': peerUuid }));
-          window.logs.appendToLogFile('INFO - ICE Candidate ' + JSON.stringify({ 'ice': event.candidate, 'uuid': localUuid, 'dest': peerUuid }) + ' (737) \n');
+          window.logs.appendToLogFile('INFO - ICE Candidate ' + JSON.stringify({ 'ice': event.candidate, 'uuid': localUuid, 'dest': peerUuid }) + ' (794) \n');
         }
       }
 
       function createdDescription(description, peerUuid) {
         //This sends the created description to the server
-        window.logs.appendToLogFile(`INFO - Received description for ${peerUuid} (742) \n`);
+        window.logs.appendToLogFile(`INFO - Received description for ${peerUuid} (800) \n`);
         peerConnections[peerUuid].pc.setLocalDescription(description).then(function () {
           serverConnection.send(JSON.stringify({ 'sdp': peerConnections[peerUuid].pc.localDescription, 'uuid': localUuid, 'dest': peerUuid }));
         }).catch(errorHandler);
@@ -806,8 +806,8 @@
       var previousPeerUUIDs = [];
 
       function gotRemoteStream(event, peerUuid) {
-        //This is invoked from the callback on line 752 when a stream (or track) is received for a certain peer
-        window.logs.appendToLogFile(`INFO - Succesfully receieved stream of peer: "${peerUuid}" (751) \n`);
+        //This is invoked from the callback on line 759 when a stream (or track) is received for a certain peer
+        window.logs.appendToLogFile(`INFO - Succesfully receieved stream of peer: "${peerUuid}" (810) \n`);
         for (i = 0; i < previousPeerUUIDs.length; i++) {
           if (previousPeerUUIDs[i] == peerUuid) {
             return;
@@ -855,7 +855,7 @@
         // This function checks for any connection disconect, failure, or if it has closed and removes the peer cleanly
         // In the case of the host, the box for the peer that disconnected will disappear automatically within 5-7 seconds of departure
         var state = peerConnections[peerUuid].pc.iceConnectionState;
-        window.logs.appendToLogFile(`CHECKING - Connection with peer ${peerUuid}: ${state} (796) \n`);
+        window.logs.appendToLogFile(`CHECKING - Connection with peer ${peerUuid}: ${state} (858) \n`);
         if (state === "failed" || state === "closed" || state === "disconnected") {
           delete peerConnections[peerUuid];
           for (i = 0; i < previousPeerUUIDs.length; i++) {
@@ -869,7 +869,7 @@
           document.getElementById('videos').removeChild(document.getElementById('remoteVideo_' + peerUuid));
           updateLayout();
         } else {
-          window.logs.appendToLogFile("INFO - Connection with peer is stable (808) \n");
+          window.logs.appendToLogFile("INFO - Connection with peer is stable (872) \n");
         }
       }
 
@@ -911,7 +911,7 @@
 
       function errorHandler(error) {
         // Error handler for basically any error that can be handled :)
-        window.logs.appendToLogFile("ERROR - occurred: " + error + " (845) \n");
+        window.logs.appendToLogFile("ERROR - occurred: " + error + " (914) \n");
       }
 
       // Taken from http://stackoverflow.com/a/105074/515584
