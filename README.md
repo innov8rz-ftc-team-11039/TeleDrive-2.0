@@ -48,19 +48,33 @@ This section of the Usage depends on your completion of the Robot Controller App
 
 ### Step 1: Plug in a USB WiFi adapter to the Host Computer
 
+![image](https://user-images.githubusercontent.com/39073758/112272340-4eeb4c80-8c39-11eb-81d9-2e7a7674b2ef.png)
+
 ### Step 2: Connect the secondary WiFi (WiFi 2) to the Control Hub or Robot Controller, and ensure that WiFi 1 is connected to your local router.
 
+![image](https://user-images.githubusercontent.com/39073758/112272411-64f90d00-8c39-11eb-9676-eaadc6f53f2a.png)
+
 ### Step 3: Launch TeleDrive
+
+![launchTeleDrive](https://user-images.githubusercontent.com/39073758/112272577-a25d9a80-8c39-11eb-837e-1936b8082d25.png)
 
 ### Step 4: Click on Host and type in an Display Name and the Robot's IP (Using your Driver Station phone, navigate to the "Program and Manage" menu, and find the local IP address of the Control Hub or Robot Controller phone). 
 
 Please note: Most Control Hubs have the IP address of `192.168.43.1`
 
+![typeIP](https://user-images.githubusercontent.com/39073758/112272608-abe70280-8c39-11eb-9865-a9525cafe655.png)
+
 ### Step 5: OPTIONAL: Feel free to regenerate a room code if you feel it is needed, but please keep in mind that you will have to send this new code to your Drivers through another messaging app (Discord, iMessages, etc.)
+
+Click on the Room Name Text or the Refresh button to generate an new room code.
 
 Since TeleDrive automatically saves your previous room code, robot IP address, and display name locally for the future, it is recommended to keep the room code the same so that the setup is smoother as Drivers can reused the saved code without having to type in a new one.
 
+![Untitled presentation](https://user-images.githubusercontent.com/39073758/112273304-70006d00-8c3a-11eb-94af-2a948256c64d.png)
+
 ### Step 6: Open Room and Start the TeleDrive OpMode on the Driver Station!
+
+![openRoom](https://user-images.githubusercontent.com/39073758/112272704-c325f000-8c39-11eb-99e1-d5112ad856a4.png)
 
 ## Driver
 
@@ -77,6 +91,9 @@ Driver setup is very easy!
 ### Step 3: Now, you can type in your desired Display Name in the text box as well as the room code that the Host should send to you separately (e.g. through iMessages or Discord chat). 
 
 **However, thanks to a special file saving feature, you only need to enter this in once!** (unless the Host decides to regenerate a room code).
+
+![image](https://user-images.githubusercontent.com/39073758/112272339-4e52b600-8c39-11eb-91e9-7a519fc77b77.png)
+
 
 ![alt text](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/blob/main/readme_images/openDriverRoom.png "Click open room")
 
