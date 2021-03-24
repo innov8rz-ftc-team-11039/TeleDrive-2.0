@@ -4,9 +4,9 @@
 
 This all-in-one app contains the ability to call using audio and video with your drive team with end-to-end encryption! Rather than having to use Parsec for video, Discord for audio, and the TeleDrive executables for gamepad, everything is though this app making it VERY easy to setup!
 
-Also note that you also do not need to set up port forwarding anymore either!
+Also note that you do not need to set up port forwarding anymore!
 
-The instructions are very simple and there are only two steps: [Installation](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0#installation "Go to Installation Section") and [Usage](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0#usage "Go to Usage Section").
+Here are the simple to follow instructions in two steps: [Installation](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0#installation "Go to Installation Section") and [Usage](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0#usage "Go to Usage Section").
 
 #### If you are interested in digging into the code and understanding/tinkering with TeleDrive, please proceed to the [Developer Setup Section](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0#developer-setup "Go to Developer Setup Section")
 
@@ -14,7 +14,7 @@ The instructions are very simple and there are only two steps: [Installation](ht
 
 ## Windows
 
-All you have to do it go to to Releases Tab for the latest release and download `TeleDrive-Windows-x64.zip`.
+All you have to do is go to to [Releases](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/releases/tag/v1.0 "Go to Releases") Tab for the latest release and download `TeleDrive-Windows-x64.zip`.
 
 Then, you simply need to extract the contents of `TeleDrive-Windows-x64.zip`. These steps are shown in the images below.
 
@@ -22,14 +22,14 @@ Extracting .zip Contents
 ![alt text](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/blob/main/readme_images/windows_extract.png "Step 1: Extract .zip Contents")
 ![alt text](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/blob/main/readme_images/windows_extract2.png "Step 2: Start Extracting Contents")
 ![alt text](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/blob/main/readme_images/windows_extract_in_progress.png "Waiting for Extracting to Finish")
-Once done, move into the folder inside until you see a bunch of files. One of them will be names `TeleDrive.exe` which you will have to double click on to launch. (The first time might take a while, but after that, it will be quick)
+Once done, move into the folder inside until you see a bunch of files. One of them will be named `TeleDrive.exe` which you will have to double click on to launch. (The first time might take a while, but after that, it will be quick)
 ![alt text](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/blob/main/readme_images/windows_going_to_exe.png "Step 3: Go into the Extracted Folder to find TeleDrive.exe")
 
-## Mac OS
+## MacOS
 
-All you have to do it go to to Releases Tab for the latest release and download `TeleDrive-MacOS.zip`.
+For MacOS you will have to go to the [Releases](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/releases/tag/v1.0 "Go to Releases") Tab for the latest release and download `TeleDrive-MacOS.zip`.
 
-Then, you simply need to extract the contents of `TeleDrive-MacOS.zip`. These steps are shown in the images below.
+Then, you just need to extract the contents of `TeleDrive-MacOS.zip`. These steps are shown in the images below.
 
 ![alt text](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/blob/main/readme_images/mac_extract.png "Step 1: Extract .zip Contents")
 ![alt text](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/blob/main/readme_images/mac_extract_in_progress.png "Waiting for Extracting to Finish")
@@ -105,11 +105,11 @@ If it does not, try to close the app and reconnect to the room.
 
 ## Updating Robot Controller App for TeleDrive
 
-If you are planning on using TeleDrive in a `LinearOpMode`, you only need to download ```TeleDrive_LinearOpMode.java``` from the Releases page and add your code under the comment that says "CUSTOM CODE GOES HERE". 
+If you are planning on using TeleDrive in a `LinearOpMode`, you only need to download ```TeleDrive_LinearOpMode.java``` from the [Releases](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/releases/tag/v1.0 "Go to Releases") page and add your code under the comment that says "CUSTOM CODE GOES HERE". 
 
 Steps 1 through 5 in this section are only for using TeleDrive in an `IterativeOpMode`
   
-  1. Download ```TeleDrive.java``` from the Releases page, and copy it into your ```TeamCode``` folder
+  1. Download ```TeleDrive.java``` from the [Releases](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/releases/tag/v1.0 "Go to Releases") page, and copy it into your ```TeamCode``` folder
   2. Change your TeleOp program(s) to extend the ```TeleDrive``` class
   3. For each OpMode function (init, init_loop, start, loop, stop) in your TeleOp class, call super.func() at the beginning of that function. **This is required, and not calling the method in the superclass would not allow TeleDrive to function properly.** (Ex: in the loop() function, you must call super.loop() at the beginning)
   4. Using your Driver Station phone, navigate to the "Program and Manage" menu, and find the local IP address of the Control Hub or Robot Controller phone
