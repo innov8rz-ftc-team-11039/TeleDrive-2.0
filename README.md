@@ -152,7 +152,7 @@ If you've tried all the solutions listed above, and TeleDrive still doesn't work
   
 # Developer Setup
 
-  If you would like to tinker with TeleDrive or understand how it works, please download this repository (either through `Github Desktop` or as a `zip`). I have taken a lot of time to write comments explaining a lot of the code in the major file: `index.html` and `preload.js`, where the bulk of the code runs. If you have any questions, please feel free to reach out to us at info@innov8rz.net!
+  If you would like to tinker with TeleDrive or understand how it works, please download this repository (either through `Github Desktop` or as a `zip`). I have taken a lot of time to write comments explaining a lot of the code in the major file: `index.html` and `preload.js`, where the bulk of the code runs. To run the app locally, you will have to run `npm install` and then `npm start` and it will automatically open the app. If you have any questions, please feel free to reach out to us at info@innov8rz.net!
   
 # Contributors
 
