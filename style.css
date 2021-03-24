@@ -1,0 +1,55 @@
+:root {
+    --rowHeight: 98vh;
+    --colWidth: 98vw;
+  }
+
+  body{
+      background: #323232;
+  }
+  
+  .videos { 
+  
+      display: grid;
+      grid-gap: 5px;
+      grid-auto-flow: row;
+      
+      grid-template-columns: repeat(auto-fit, minmax(var(--colWidth), 1fr)) ;
+  }
+  
+  .videoContainer {
+      position: relative;
+      overflow: hidden;
+      
+      min-height: var(--rowHeight);
+      min-width: var(--colWidth);
+      /* background: black;       */
+  }
+  
+  .videoContainer video {
+  
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: auto;
+      width: 100%;
+      /* background: black; */
+  }
+
+  @font-face {
+    font-family: 'Jura';
+    src: url('./font/Jura-Light.ttf');
+  }
+  
+  .videoLabel {
+      color: white;
+      font: bold 18px Jura, Sans-Serif;
+      line-height: 18px;
+      height: 18px;
+      
+      background: rgba(0, 0, 0, 0.35);
+      
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 4px;
+  }

@@ -1,0 +1,65 @@
+{
+  "name": "TeleDrive",
+  "version": "1.0.0",
+  "description": "Host Relay Server to Forward Gamepad Commands to the FTC Robot",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "package-win": "electron-packager . --platform=win32 --arch=x64 --prune=true --out=release-builds --version-string.ProductName=\"TeleDrive\" --icon=assets/logo5.ico --overwrite",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --prune=true --arch=x64 --out=release-builds --icon=teledrive.icns"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "TeleDrive",
+    "Innov8rz",
+    "FTC",
+    "FIRST",
+    "Robot"
+  ],
+  "author": "Mihir Chauhan",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "^12.0.0"
+  },
+  "dependencies": {
+    "asar": "^3.0.3",
+    "electron-localshortcut": "^3.2.1",
+    "electron-packager": "^15.2.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "ws": "^7.4.3"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "teledrive"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
