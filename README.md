@@ -6,9 +6,9 @@ This all-in-one app contains the ability to call using audio and video with your
 
 Also note that you also do not need to set up port forwarding anymore either!
 
-The instructions are very simple and there are only two steps: [Installation](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/new/main?readme=1#installation "Go to Installation Section") and [Usage](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/new/main?readme=1#usage "Go to Usage Section").
+The instructions are very simple and there are only two steps: [Installation](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0#installation "Go to Installation Section") and [Usage](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0#usage "Go to Usage Section").
 
-#### If you are interested in digging into the code and understanding/tinkering with TeleDrive, please proceed to the [Developer Setup Section](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/new/main?readme=1#developer-setup "Go to Developer Setup Section")
+#### If you are interested in digging into the code and understanding/tinkering with TeleDrive, please proceed to the [Developer Setup Section](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0#developer-setup "Go to Developer Setup Section")
 
 # Installation
 
