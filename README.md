@@ -2,9 +2,9 @@
 ![TeleDrive 2.0](https://user-images.githubusercontent.com/39073758/112276623-303b8480-8c3e-11eb-85b7-c548d91da225.png)
 ## TeleDrive 1.0's Sequel. Simpler, Faster, Easier.
 
-This all-in-one app contains the ability to call using audio and video with your drive team with end-to-end encryption! Rather than having to use Parsec for video, Discord for audio, and the TeleDrive executables for gamepad, everything is though this app making it VERY easy to setup!
+This all-in-one app that not only allows you to drive your robot remotely but also includes the capability for low latency video feed with group audio call. All of this with end-to-end encryption! If you used TeleDrive 1.0 then you may remember having to use Parsec for video, Discord for audio, and the TeleDrive executables for gamepad. This version simplifies the setup with ease of use.
 
-Also note that you do not need to set up port forwarding anymore!
+Also no need to set up port forwarding on your router anymore!
 
 Here are the simple to follow instructions in two steps: [Installation](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0#installation "Go to Installation Section") and [Usage](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0#usage "Go to Usage Section").
 
