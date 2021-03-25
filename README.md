@@ -35,13 +35,36 @@ Then, you just need to extract the contents of `TeleDrive-MacOS.zip`. These step
 ![alt text](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/blob/main/readme_images/mac_extract_in_progress.png "Waiting for Extracting to Finish")
 ![alt text](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/blob/main/readme_images/mac_extract_finished.png "Step 2: Open the TeleDrive App")
 
-Once done, you need to open the TeleDrive app by double clicking on it.
+#### Since MacOS Big Sur has more advanced security for downloaded apps, you will need to do the following.
+
+First, move TeleDrive to the `Applications` Folder. Make sure you are moving the file and not copying it so that there is only 1 TeleDrive app
+
+<img width="403" alt="Mac_MoveToApps" src="https://user-images.githubusercontent.com/39073758/112412117-36337300-8cdb-11eb-90ae-87500df972a5.png">
+<img width="478" alt="Mac_Apps" src="https://user-images.githubusercontent.com/39073758/112412343-9de9be00-8cdb-11eb-9f1e-2f8818194a54.png">
+
+Next, you will need to double click on the app in the `Applications` folder and it will give a permission denied message shown below.
+
+<img width="269" alt="Mac_FirstLaunch" src="https://user-images.githubusercontent.com/39073758/112412645-1a7c9c80-8cdc-11eb-8e92-dc636831e85d.png">
+
+Make sure you click cancel on this pop-up message.
+
+Next, open `System Preferences` and click `Privacy and Security`. In the 'General' tab You will need to then allow access to the TeleDrive app by clicking on 'Open Anyway'.
+
+<img width="645" alt="Mac_SysPref" src="https://user-images.githubusercontent.com/39073758/112412665-223c4100-8cdc-11eb-9303-e36e215fd5bb.png">
+<img width="671" alt="Mac_AllowOpen" src="https://user-images.githubusercontent.com/39073758/112412682-28cab880-8cdc-11eb-8645-209c61e3a7f2.png">
+
+Finally, on the pop-up click 'Open' and the TeleDrive app will be launch.
+
+<img width="275" alt="Mac_Open" src="https://user-images.githubusercontent.com/39073758/112412705-33854d80-8cdc-11eb-8d09-2e861ec6c011.png">
+
 
 # Usage
 
 The User Interface is the same across all platforms, but instructions for Host and Driver are different. 
 
 **Please Note: There is a [section](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0#updating-robot-controller-app-for-teledrive "Go to Robot Controller Code Section") below dedicated to changed that need to be made to the Robot Controller side code.**
+
+#### It is also very important that the Host joins the room FIRST and then the drivers can join after so that the Gamepad Data Channels properly initialize.
 
 ## Host
 
@@ -97,7 +120,7 @@ Driver setup is very easy!
 
 ![alt text](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0/blob/main/readme_images/openDriverRoom.png "Click open room")
 
-### Step 4: Click join room and make sure that it says `Status: Connected` on the top. Once it shows up, you need to either click `Start + A` or `Start + B` depending on your driver user. To confirm this user, it will show on the top bar which user you are. 
+### Step 4: Click join room and make sure that it says `Status: Connected` on the top. Once it shows up, you need to either click `Start + A` or `Start + B` depending on your driver user. To confirm this, the app will say `Gamepad User: 1` or `Gamepad User: 2 ` on the top bar. 
 
 If it does not, try to close the app and reconnect to the room.
 
@@ -152,7 +175,7 @@ If you've tried all the solutions listed above, and TeleDrive still doesn't work
   
 # Developer Setup
 
-  If you would like to tinker with TeleDrive or understand how it works, please download this repository (either through `Github Desktop` or as a `zip`). I have taken a lot of time to write comments explaining a lot of the code in the major file: `index.html` and `preload.js`, where the bulk of the code runs. To run the app locally, you will have to run `npm install` and then `npm start` and it will automatically open the app. If you have any questions, please feel free to reach out to us at info@innov8rz.net!
+  If you would like to tinker with TeleDrive or understand how it works, please fork this repository and feel free to make pull requests for any new features! I have taken a lot of time to write comments explaining a lot of the code in the major file: `index.html` and `preload.js`, where the bulk of the code runs. To run the app locally, you will have to run `npm install` and then `npm start` and it will automatically open the app. If you have any questions, please feel free to reach out to us at info@innov8rz.net! 
   
 # Contributors
 
