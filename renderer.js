@@ -111,7 +111,7 @@ function regenerateRoomName() {
 function openRoomButton() {
     document.addEventListener("keyup", function (event) {
     // Number 13 is the "Enter" key on the keyboard
-    if (event.keyCode === 13 && !hasAlreadyOpenedRoom) {
+    if (event.key === "Enter" && !hasAlreadyOpenedRoom) {
         // Cancel the default action, if needed
         event.preventDefault();
         // Trigger the button element with a click
