@@ -10,6 +10,8 @@ Here are the simple to follow instructions in two steps: [Installation](https://
 
 #### If you are interested in digging into the code and understanding/tinkering with TeleDrive, please proceed to the [Developer Setup Section](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0#developer-setup "Go to Developer Setup Section")
 
+## Currently, TeleDrive 2.0 Servers are down for Maintainance. Please check back soon!
+
 # Installation
 
 ## Windows
